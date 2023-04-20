@@ -4,7 +4,6 @@ $width = 600;
 $height = 800;
 $img = imagecreatetruecolor($width, $height);
 imageantialias($img, true);
-
 // Установка цвета текста
 $text_color = imagecolorallocate($img, 0, 0, 0);
 
@@ -15,10 +14,16 @@ imagefill($img, 0, 0, $bg_index);
 // Написание текста
 $text = 'NSobolev';
 $font_size = 80;
-$font_file = 'fonts/Allison_Script.otf';
+// $font_file = 'fonts/Allison_Script.otf';
 // $font_file = 'fonts/Creattion_Demo.otf';
-// $font_file = 'fonts/Holligate_Signature_Demo.ttf';
-// $font_file = 'fonts/Southam.otf';
+// $font_file = 'fonts/Holligate_Signature_Demo.ttf';  // only with small letter in the end
+// $font_file = 'fonts/Southam.otf';  // only with small letter in the end
+// $font_file = 'fonts/aerotis.regular.otf';
+$font_file = 'fonts/broetown-signature.broetownsignatureregular.ttf';  // ----
+// $font_file = 'fonts/funky-signature.regular.otf';
+// $font_file = 'fonts/holimount.regular.otf';
+// $font_file = 'fonts/honeymoon-avenue-script.regular.otf';  // only with small letter in the end
+// $font_file = 'fonts/lovtony.regular.ttf';  // only with small letter in the end
 
 // Поиск самого правого пикселя последней буквы
 $bbox = imagettfbbox($font_size, 0, $font_file, $text);
@@ -66,18 +71,22 @@ function add_bottom_curve() {
 }
 
 function draw_beizer_curve($points, $img, $text_color) {
-  // imagesetthickness($img, 1);
   $steps = 70;
-
-  for ($i = 0; $i <= $steps; ++$i) {
-    $t = $i / $steps;
-    $pt = bezier($points, $t);
-    if ($i === 0) {
+  $line_thickness = 1; // set the desired thickness
+  
+  for ($j = -($line_thickness-1)/2; $j <= ($line_thickness-1)/2; $j++) {
+    imagesetthickness($img, 1); // use a thin thickness
+    for ($i = 0; $i <= $steps; ++$i) {
+      $t = $i / $steps;
+      $pt = bezier($points, $t);
+      if ($i === 0) {
         $prev_pt = $pt;
         continue;
+      }
+      // draw the line with an offset starting and ending position
+      imageline($img, round($prev_pt[0]+$j), round($prev_pt[1]+$j), round($pt[0]+$j), round($pt[1]+$j), $text_color);
+      $prev_pt = $pt;
     }
-    imageline($img, round($prev_pt[0]), round($prev_pt[1]), round($pt[0]), round($pt[1]), $text_color);
-    $prev_pt = $pt;
   }
 }
 
@@ -310,7 +319,7 @@ function add_top_line() {
 // add_bottom_heart();
 // add_bottom_curve5();
 // add_bottom_curve6();
-// add_bottom_curve7();
+add_bottom_curve7();
 // add_right_line();
 // add_top_line();
 
