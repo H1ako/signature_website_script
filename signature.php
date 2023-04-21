@@ -12,18 +12,39 @@ $bg_color = imagecolorsforindex($img, $bg_index);
 imagefill($img, 0, 0, $bg_index);
 
 // Написание текста
-$text = 'NSobolev';
+$text = 'Nikita Sobolev Alexeyevich';
+$first_name = 'Nikita';
+$last_name = 'Sobolev';
+$middle_name = 'Alexeyevich';
+$first_letter_of_first_name = strlen($first_name) > 0 ? $first_name[0] : '';
+$first_letter_of_last_name = strlen($last_name) > 0 ? $last_name[0] : '';
+$first_letter_of_middle_name = strlen($middle_name) > 0 ? $middle_name[0] : '';
+
 $font_size = 80;
-// $font_file = 'fonts/Allison_Script.otf';
-// $font_file = 'fonts/Creattion_Demo.otf';
-// $font_file = 'fonts/Holligate_Signature_Demo.ttf';  // only with small letter in the end
-// $font_file = 'fonts/Southam.otf';  // only with small letter in the end
-// $font_file = 'fonts/aerotis.regular.otf';
-$font_file = 'fonts/broetown-signature.broetownsignatureregular.ttf';  // ----
-// $font_file = 'fonts/funky-signature.regular.otf';
-// $font_file = 'fonts/holimount.regular.otf';
-// $font_file = 'fonts/honeymoon-avenue-script.regular.otf';  // only with small letter in the end
-// $font_file = 'fonts/lovtony.regular.ttf';  // only with small letter in the end
+$font_allison = 'fonts/Allison_Script.otf';
+$font_creation = 'fonts/Creattion_Demo.otf';
+$font_aerotis = 'fonts/aerotis.regular.otf';
+$font_funky = 'fonts/funky-signature.regular.otf';
+$font_holimount = 'fonts/holimount.regular.otf';
+$font_holligate = 'fonts/Holligate_Signature_Demo.ttf';  // only with small letter in the end
+$font_southam = 'fonts/Southam.otf';  // only with small letter in the end
+$font_honeymoon = 'fonts/honeymoon-avenue-script.regular.otf';  // only with small letter in the end
+$font_lovtony = 'fonts/lovtony.regular.ttf';  // only with small letter in the end
+
+$styles = [
+  [
+    'font' => $font_allison,
+    'text' => ''
+  ],
+];
+
+function get_first_letters_string_from_text($length) {
+  global $first_name, $last_name, $middle_name;
+
+  
+}
+
+print_r(get_first_letters_string_from_text(3));
 
 // Поиск самого правого пикселя последней буквы
 $bbox = imagettfbbox($font_size, 0, $font_file, $text);
@@ -324,8 +345,8 @@ add_bottom_curve7();
 // add_top_line();
 
 // Вывод изображения
-header('Content-Type: image/png');
-imagepng($img);
+// header('Content-Type: image/png');
+// imagepng($img);
 
 // Освобождение памяти
 imagedestroy($img);
