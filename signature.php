@@ -661,20 +661,21 @@ for($y=0; $y<$height; $y++) {
   }
 }
 
-foreach ($curves as $curve) {
-  $curve();
-}
+// foreach ($curves as $curve) {
+  // $curve();
+// }
 
-// add_stretched_curve();
-// add_curve();
-// add_bottom_curve();
 // add_bottom_curve2();
+// add_bottom_curve6();
+
+// add_curve();
+// add_stretched_curve();
+// add_bottom_curve();
 // add_bottom_curve3();
 // add_bottom_curve4();
 // add_bottom_heart();
-// add_bottom_curve5();
-// add_bottom_curve6();
 // add_bottom_curve7();
+// add_bottom_curve5();
 // add_right_line();
 // add_top_line();
 
