@@ -271,6 +271,18 @@ function draw_top_curve() {
   $curves_draw->bezier($points);
 }
 
+function draw_top_sun() {
+  global $imagick, $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height;
+
+  $overlay = new \Imagick();
+  $overlay->readImage('C:\php_projects\signature\images\sun.png');
+
+  $x = round($most_right_x - $text_width * 0.2); // значение координаты X
+  $y = round($text_y); // значение координаты Y
+
+  $imagick->compositeImage($overlay, \Imagick::COMPOSITE_DEFAULT, $x, $y);
+}
+
 $styles_index = 0;
 $text_style_index = 0;
 
@@ -477,6 +489,8 @@ $curves_draw->setStrokeOpacity(1);
 $curves_draw->setStrokeColor('black');
 $curves_draw->setStrokeWidth($thickness);
 
+
+
 // draw_bottom_heart();
 // draw_curve();
 // draw_stretched_curve();
@@ -487,6 +501,7 @@ $curves_draw->setStrokeWidth($thickness);
 // draw_bottom_curve5();
 // draw_bottom_curve6();
 // draw_bottom_curve7();
+draw_top_sun();
 draw_bottom_curve7_long();
 draw_right_line();
 // draw_top_curve();
