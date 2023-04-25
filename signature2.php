@@ -170,7 +170,7 @@ function draw_bottom_curve6() {
     ['x' => $most_left_x + $text_width / 8, 'y' => $text_box_bottom_y],
     ['x' => $most_left_x + $text_width / 8, 'y' => $text_box_bottom_y + $text_height / 10],
     ['x' => $most_left_x + $text_width / 8, 'y' => $text_box_bottom_y + $text_height / 10],
-    ['x' => $most_left_x + $text_width / 1.5, 'y' => $text_box_bottom_y - $text_height / 5],
+    ['x' => $most_left_x + $text_width / 1.5, 'y' => $text_box_bottom_y + 10],
   ];
 
   $curves_draw->bezier($points);
@@ -243,6 +243,78 @@ function draw_bottom_curve7_long() { // $font_size = 120;
   $curves_draw->bezier($second_points);
 }
 
+function draw_bottom_curve8() {
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
+
+  $points = [
+    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.7],
+    ['x' => $most_right_x + 100, 'y' => $most_right_y - $text_height * 1.2],
+    ['x' => $most_right_x + 10, 'y' => $most_right_y - $text_height * 1.2],
+    ['x' => $most_right_x - 120, 'y' => $most_right_y - $text_height * 0.1],
+    ['x' => $most_right_x + 90, 'y' => $most_right_y - $text_height * 0.1],
+    ['x' => $most_right_x + 100, 'y' => $most_right_y - $text_height * 0.2],
+    ['x' => $most_right_x + 100, 'y' => $most_right_y - $text_height * 0.3],
+    ['x' => $most_right_x + 100, 'y' => $most_right_y + $text_height * 0.1],
+    // ['x' => $most_right_x + 150, 'y' => $most_right_y - $text_height * 0.2],
+    ['x' => $most_left_x + $text_width * 0.5, 'y' => $most_right_y - $text_height * 0.2],
+    // ['x' => $most_left_x + $text_width * 0.3, 'y' => $most_right_y - $text_height * 0.2],
+    ['x' => $most_left_x + $text_width * 0.2, 'y' => $most_left_y + $text_height * 0.1],
+  ];
+
+  $curves_draw->bezier($points);
+}
+
+function draw_bottom_curve9() {
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
+
+  $points = [
+    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x + $text_width * 0.1, 'y' => $most_right_y],
+    ['x' => $most_right_x + $text_width * 0.1, 'y' => $most_right_y - $text_height * 0.2],
+    ['x' => $most_right_x - $text_width * 0.1, 'y' => $most_right_y - $text_height * 0.7],
+    ['x' => $most_right_x - $text_width * 0.2, 'y' => $most_right_y - $text_height * 0.7],
+    ['x' => $most_right_x - $text_width * 0.5, 'y' => $most_right_y - $text_height * 0.7],
+    ['x' => $most_right_x - $text_width * 0.7, 'y' => $most_right_y - $text_height * 0.6],
+    ['x' => $most_right_x - $text_width * 0.8, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_right_x - $text_width * 0.8, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_right_x - $text_width * 0.4, 'y' => $most_right_y + $text_height * 0.3],
+    ['x' => $most_right_x - $text_width * 0.1, 'y' => $most_right_y + $text_height * 0.2],
+    ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.2],
+    ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.25],
+    ['x' => $most_right_x + 100, 'y' => $most_right_y + $text_height * 0.2],
+    ['x' => $most_right_x + 100, 'y' => $most_right_y + $text_height * 0.4],
+    ['x' => $most_right_x + 80, 'y' => $most_right_y + $text_height * 0.4],
+  ];
+
+  $points_2 = [
+    ['x' => $most_right_x - $text_width * 0.4 + $text_width * 0.1, 'y' => $most_right_y - $text_height * 0.2],
+    ['x' => $most_right_x - $text_width * 0.4 - $text_width * 0.1, 'y' => $most_right_y - $text_height * 0.7],
+    ['x' => $most_right_x - $text_width * 0.4 - $text_width * 0.2, 'y' => $most_right_y - $text_height * 0.7],
+    ['x' => $most_right_x - $text_width * 0.4 - $text_width * 0.5, 'y' => $most_right_y - $text_height * 0.7],
+    ['x' => $most_right_x - $text_width * 0.4 - $text_width * 0.7, 'y' => $most_right_y - $text_height * 0.6],
+    ['x' => $most_right_x - $text_width * 0.4 - $text_width * 0.8, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_right_x - $text_width * 0.4 - $text_width * 0.8, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_right_x - $text_width * 0.4, 'y' => $most_right_y + $text_height * 0.3],
+    ['x' => $most_right_x - $text_width * 0.1, 'y' => $most_right_y + $text_height * 0.2],
+    ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.25],
+  ];
+
+  $curves_draw->bezier($points);
+  $curves_draw->bezier($points_2);
+}
+
+function draw_bottom_curve10() {
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
+
+  $points = [
+    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_left_x - $text_width * 0.1, 'y' => $most_right_y],
+  ];
+
+  $curves_draw->bezier($points);
+}
+
 function draw_right_line() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height;
 
@@ -272,13 +344,17 @@ function draw_top_curve() {
 }
 
 function draw_top_sun() {
-  global $imagick, $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height;
+  global $imagick, $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height, $most_top_y;
 
   $overlay = new \Imagick();
-  $overlay->readImage('C:\php_projects\signature\images\sun.png');
+  $overlay->readImage('C:\Apache24\htdocs\signature_script\images\sun.png');
+  $overlay_width = $overlay->getImageWidth();
+  $overlay_height = $overlay->getImageHeight();
+  $degrees = -20;
+  $overlay->rotateImage('none', $degrees);
 
-  $x = round($most_right_x - $text_width * 0.2); // значение координаты X
-  $y = round($text_y); // значение координаты Y
+  $x = round($most_right_x - $overlay_width / 2 - ($overlay_height * cos(deg2rad($degrees)) / 2)); // значение координаты X
+  $y = round($most_top_y - $overlay_height - ($overlay_height * sin(deg2rad($degrees)) / 4) - 20); // значение координаты Y
 
   $imagick->compositeImage($overlay, \Imagick::COMPOSITE_DEFAULT, $x, $y);
 }
@@ -287,7 +363,7 @@ $styles_index = 0;
 $text_style_index = 0;
 
 // Написание текста
-$text = 'SNikita';
+$text = 'NSobolev';
 $first_name = 'Nikita';
 $last_name = 'Sobolev';
 $middle_name = 'Alexeyevich';
@@ -295,25 +371,22 @@ $first_letter_of_first_name = strlen($first_name) > 0 ? $first_name[0] : '';
 $first_letter_of_last_name = strlen($last_name) > 0 ? $last_name[0] : '';
 $first_letter_of_middle_name = strlen($middle_name) > 0 ? $middle_name[0] : '';
 
-$styled_text_1 = "$first_letter_of_last_name$first_letter_of_first_name$first_letter_of_middle_name"; // SNA
-$styled_text_2 = "$first_letter_of_last_name$first_letter_of_first_name"; // SN
-$styled_text_3 = "$first_letter_of_last_name$first_name"; // SNikita
-$styled_text_4 = "$first_letter_of_last_name$first_letter_of_middle_name$first_name"; // SANikita
-$styled_text_5 = "$first_letter_of_first_name$last_name"; // NSobolev
-$styled_text_6 = "$first_letter_of_first_name$first_letter_of_middle_name$last_name"; // NASobolev
-$styled_text_7 = "$last_name"; // Sobolev
-$styled_text_8 = "$first_name"; // Nikita
+$styled_text_1 = "$first_letter_of_last_name$first_name"; // SNikita
+$styled_text_2 = "$first_letter_of_first_name$last_name"; // NSobolev
+$styled_text_3 = "$first_letter_of_last_name$first_letter_of_middle_name$first_name"; // SANikita
+$styled_text_4 = "$first_letter_of_first_name$first_letter_of_middle_name$last_name"; // NASobolev
+$styled_text_5 = "$last_name"; // Sobolev
+$styled_text_6 = "$first_name"; // Nikita
 
-$text_styles_not_acronym = [
-  $styled_text_3,
-  $styled_text_4,
-  $styled_text_5,
-  $styled_text_6,
-  $styled_text_7,
-  $styled_text_8
-];
+$styled_text_1_short = "$first_letter_of_last_name$first_name"; // SNikita
+$styled_text_2_short = "$first_letter_of_first_name$last_name"; // NSobolev
+$styled_text_3_short = "$first_letter_of_last_name$first_letter_of_middle_name$first_name"; // SANikita
+$styled_text_4_short = "$first_letter_of_first_name$first_letter_of_middle_name$last_name"; // NASobolev
+$styled_text_5_short = $styled_text_5; // Sobolev
+$styled_text_6_short = "$first_name"; // Nikita
 
-$text_styles_full = [
+
+$text_styles = [
   $styled_text_1,
   $styled_text_2,
   $styled_text_3,
@@ -351,11 +424,9 @@ $font_honeymoon = [
   'text_styles_thickness' => 1
 ];  // only with small letter in the end
 
-$fonts_full = [
+$fonts = [
   $font_aerotis,
   $font_funky,
-];
-$fonts_not_acronym = [
   $font_southam,
   $font_honeymoon,
   $font_holimount,
@@ -363,72 +434,8 @@ $fonts_not_acronym = [
 ];
 
 $styles = [
-  _get_style($font_southam, $text_styles_not_acronym, [])
+  _get_style($font_southam, $text_styles, [])
 ];
-
-// foreach ($fonts_not_acronym as $font) {
-//   $styles = [...$styles, get_style1($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style2($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style3($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style4($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style5($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style6($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style7($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style8($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style9($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style10($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style11($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style12($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style13($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style14($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style15($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style16($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style17($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style18($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style19($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style20($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style21($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style22($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style23($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style24($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style25($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style26($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style27($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style28($font, $text_styles_not_acronym)];
-//   $styles = [...$styles, get_style29($font, $text_styles_not_acronym)];
-// }
-
-// foreach ($fonts_full as $font) {
-//   $styles = [...$styles, get_style1($font, $text_styles_full)];
-//   $styles = [...$styles, get_style2($font, $text_styles_full)];
-//   $styles = [...$styles, get_style3($font, $text_styles_full)];
-//   $styles = [...$styles, get_style4($font, $text_styles_full)];
-//   $styles = [...$styles, get_style5($font, $text_styles_full)];
-//   $styles = [...$styles, get_style6($font, $text_styles_full)];
-//   $styles = [...$styles, get_style7($font, $text_styles_full)];
-//   $styles = [...$styles, get_style8($font, $text_styles_full)];
-//   $styles = [...$styles, get_style9($font, $text_styles_full)];
-//   $styles = [...$styles, get_style10($font, $text_styles_full)];
-//   $styles = [...$styles, get_style11($font, $text_styles_full)];
-//   $styles = [...$styles, get_style12($font, $text_styles_full)];
-//   $styles = [...$styles, get_style13($font, $text_styles_full)];
-//   $styles = [...$styles, get_style14($font, $text_styles_full)];
-//   $styles = [...$styles, get_style15($font, $text_styles_full)];
-//   $styles = [...$styles, get_style16($font, $text_styles_full)];
-//   $styles = [...$styles, get_style17($font, $text_styles_full)];
-//   $styles = [...$styles, get_style18($font, $text_styles_full)];
-//   $styles = [...$styles, get_style19($font, $text_styles_full)];
-//   $styles = [...$styles, get_style20($font, $text_styles_full)];
-//   $styles = [...$styles, get_style21($font, $text_styles_full)];
-//   $styles = [...$styles, get_style22($font, $text_styles_full)];
-//   $styles = [...$styles, get_style23($font, $text_styles_full)];
-//   $styles = [...$styles, get_style24($font, $text_styles_full)];
-//   $styles = [...$styles, get_style25($font, $text_styles_full)];
-//   $styles = [...$styles, get_style26($font, $text_styles_full)];
-//   $styles = [...$styles, get_style27($font, $text_styles_full)];
-//   $styles = [...$styles, get_style28($font, $text_styles_full)];
-//   $styles = [...$styles, get_style29($font, $text_styles_full)];
-// }
 
 // Создание нового изображения
 $style = $styles[$styles_index];
@@ -459,13 +466,15 @@ $text_x = round(($width - $text_width) / 2);
 $text_y = round(($height - $text_height) / 2 + $font_size);
 
 $text_box_bottom_y = $metrics['boundingBox']['y2'] / 2 + $text_y;
+$text_box_top_y = $metrics['boundingBox']['y1'] + $text_y / 2;
 
-$imagick->annotateImage($text_draw, $text_x, $text_y, 0, $text); // -15
+$imagick->annotateImage($text_draw, $text_x, $text_y, -0, $text); // -15
 
 $most_right_x = 0;
 $most_left_x = $width;
 $most_right_y = 0;
 $most_left_y = $height;
+$most_top_y = $height;
 
 for($y=0; $y<$height; $y++) {
   for($x=0; $x<$width; $x++) {
@@ -479,6 +488,10 @@ for($y=0; $y<$height; $y++) {
     else if (!$isDifferentWithBg && $most_left_x > $x) {
       $most_left_x = $x;
       $most_left_y = $y;
+    }
+
+    if (!$isDifferentWithBg && $most_top_y > $y) {
+      $most_top_y = $y;
     }
   }
 }
@@ -495,20 +508,160 @@ $curves_draw->setStrokeWidth($thickness);
 // draw_curve();
 // draw_stretched_curve();
 // draw_bottom_curve1();
-// draw_bottom_curve2();
+// draw_bottom_curve2(); //---
 // draw_bottom_curve3();
 // draw_bottom_curve4();
 // draw_bottom_curve5();
 // draw_bottom_curve6();
 // draw_bottom_curve7();
-draw_top_sun();
-draw_bottom_curve7_long();
-draw_right_line();
+// draw_bottom_curve8();
+// draw_bottom_curve9();
+// draw_top_sun();
+// draw_bottom_curve7_long();
+// draw_right_line();
 // draw_top_curve();
 
+function add_style1() {
+  $angle = -15;
+
+  draw_bottom_curve8();
+}
+
+function add_style2() {
+  global $styled_text_2;
+
+  $angle = -15;
+  $text_style = $styled_text_2;
+
+  draw_top_sun();
+  draw_bottom_curve7_long();
+  draw_right_line();
+}
+
+function add_style3() {
+  global $styled_text_4;
+
+  $text_style = $styled_text_4;
+  $angle = -15;
+
+  draw_top_sun();
+  draw_bottom_curve7_long();
+  draw_right_line();
+}
+
+function add_style4() {
+  global $styled_text_1;
+
+  $angle = -15;
+  $text_style = $styled_text_1;
+
+  draw_bottom_curve6();
+}
+
+function add_style5() {
+  global $styled_text_1;
+
+  $angle = 0;
+  $text_style = $styled_text_1;
+
+  draw_bottom_curve5();
+  draw_right_line();
+}
+
+function add_style6() {
+  global $styled_text_5;
+
+  $angle = 0;
+  $text_style = $styled_text_5;
+
+  draw_bottom_curve5();
+  draw_top_curve();
+}
+
+function add_style7() {
+  global $styled_text_5;
+
+  $angle = 0;
+  $text_style = $styled_text_5;
+
+  draw_bottom_curve4();
+  draw_right_line();
+}
+
+function add_style8() {
+  global $styled_text_3;
+
+  $angle = 0;
+  $text_style = $styled_text_3;
+
+  draw_bottom_curve3();
+  draw_top_sun();
+}
+
+function add_style9() {
+  global $styled_text_1;
+
+  $angle = 0;
+  $text_style = $styled_text_1;
+
+  draw_bottom_curve7();
+  draw_right_line();
+}
+
+function add_style10() {
+  global $styled_text_4;
+
+  $angle = 0;
+  $text_style = $styled_text_4;
+
+  draw_stretched_curve();
+  draw_right_line();
+}
+
+function add_style11() {
+  global $styled_text_3;
+
+  $angle = 0;
+  $text_style = $styled_text_3;
+
+  draw_curve();
+  draw_top_curve();
+}
+
+function add_style12() {
+  global $styled_text_6;
+
+  $angle = 0;
+  $text_style = $styled_text_6;
+
+  draw_bottom_heart();
+}
+
+function add_style13() {
+  global $styled_text_4;
+
+  $angle = 0;
+  $text_style = $styled_text_4;
+
+  draw_bottom_curve9();
+}
+
+function add_style14() {
+  global $styled_text_4;
+
+  $angle = 0;
+  $text_style = $styled_text_4;
+
+  draw_bottom_curve10();
+}
+
+add_style14();
+
 $imagick->drawImage($curves_draw);
+// $imagick->trimImage(0);
 
 // $imagick->rotateImage('none', -15);
 
+// print_r($most_top_y);
 header('Content-Type: image/png');
 echo $imagick;
