@@ -106,19 +106,19 @@ function draw_bottom_curve3() {
 
   $points = [
     ['x' => $most_right_x, 'y' => $most_right_y],
-    ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + 30],
-    ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + 30],
+    ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + $text_height * 0.3],
+    ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + $text_height * 0.3],
     ['x' => $most_right_x, 'y' => $most_right_y + 40],
-    ['x' => $most_right_x + $text_width * 0.25, 'y' => $most_right_y + 50],
-    ['x' => $most_right_x + $text_width * 0.25, 'y' => $most_right_y + 50],
-    ['x' => $most_left_x  + $text_width * 0.1, 'y' => $most_right_y + 60],
-    ['x' => $most_left_x - $text_width * 0.25, 'y' => $most_right_y + 70],
-    ['x' => $most_left_x - $text_width * 0.25, 'y' => $most_right_y + 70],
-    ['x' => $most_left_x + $text_width * 0.1, 'y' => $most_right_y + 80],
-    ['x' => $most_right_x, 'y' => $most_right_y + 90],
-    ['x' => $most_right_x, 'y' => $most_right_y + 90],
-    ['x' => $most_left_x + $text_width * 0.3, 'y' => $most_right_y + 100],
-    ['x' => $most_left_x + $text_width * 0.3, 'y' => $most_right_y + 90],
+    ['x' => $most_right_x + $text_width * 0.25, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_right_x + $text_width * 0.25, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_left_x  + $text_width * 0.1, 'y' => $most_right_y + $text_height * 0.6],
+    ['x' => $most_left_x - $text_width * 0.25, 'y' => $most_right_y + $text_height * 0.7],
+    ['x' => $most_left_x - $text_width * 0.25, 'y' => $most_right_y + $text_height * 0.7],
+    ['x' => $most_left_x + $text_width * 0.1, 'y' => $most_right_y + $text_height * 0.8],
+    ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.9],
+    ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.9],
+    ['x' => $most_left_x + $text_width * 0.3, 'y' => $most_right_y + $text_height],
+    ['x' => $most_left_x + $text_width * 0.3, 'y' => $most_right_y + $text_height * 0.9],
   ];
 
   $curves_draw->bezier($points);
@@ -129,15 +129,15 @@ function draw_bottom_curve4() {
 
   $points = [
     ['x' => $most_right_x, 'y' => $most_right_y],
-    ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + 10],
-    ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + 30],
-    ['x' => $most_right_x, 'y' => $most_right_y + 40],
-    ['x' => $most_right_x + $text_width * 0.25, 'y' => $most_right_y + 50],
-    ['x' => $most_right_x + $text_width * 0.25, 'y' => $most_right_y + 50],
-    ['x' => $most_left_x  + $text_width * 0.1, 'y' => $most_right_y + 60],
-    ['x' => $most_left_x + $text_width * 0.5, 'y' => $most_right_y + 70],
-    ['x' => $most_left_x + $text_width * 0.5, 'y' => $most_right_y + 70],
-    ['x' => $most_left_x + $text_width, 'y' => $most_right_y + 80],
+    ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + $text_height * 0.1],
+    ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + $text_height * 0.3],
+    ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.4],
+    ['x' => $most_right_x + $text_width * 0.25, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_right_x + $text_width * 0.25, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_left_x  + $text_width * 0.1, 'y' => $most_right_y + $text_height * 0.6],
+    ['x' => $most_left_x + $text_width * 0.5, 'y' => $most_right_y + $text_height * 0.7],
+    ['x' => $most_left_x + $text_width * 0.5, 'y' => $most_right_y + $text_height * 0.7],
+    ['x' => $most_left_x + $text_width, 'y' => $most_right_y + $text_height * 0.8],
   ];
 
   $curves_draw->bezier($points);
@@ -249,13 +249,13 @@ function draw_bottom_curve8() {
   $points = [
     ['x' => $most_right_x, 'y' => $most_right_y],
     ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.7],
-    ['x' => $most_right_x + 100, 'y' => $most_right_y - $text_height * 1.2],
-    ['x' => $most_right_x + 10, 'y' => $most_right_y - $text_height * 1.2],
-    ['x' => $most_right_x - 120, 'y' => $most_right_y - $text_height * 0.1],
-    ['x' => $most_right_x + 90, 'y' => $most_right_y - $text_height * 0.1],
-    ['x' => $most_right_x + 100, 'y' => $most_right_y - $text_height * 0.2],
-    ['x' => $most_right_x + 100, 'y' => $most_right_y - $text_height * 0.3],
-    ['x' => $most_right_x + 100, 'y' => $most_right_y + $text_height * 0.1],
+    ['x' => $most_right_x + $text_width * 0.5, 'y' => $most_right_y - $text_height * 1.2],
+    ['x' => $most_right_x + $text_height * 0.05, 'y' => $most_right_y - $text_height * 1.2],
+    ['x' => $most_right_x - $text_height * 0.6, 'y' => $most_right_y - $text_height * 0.1],
+    ['x' => $most_right_x + $text_height * 0.85, 'y' => $most_right_y - $text_height * 0.1],
+    ['x' => $most_right_x + $text_height * 0.5, 'y' => $most_right_y - $text_height * 0.2],
+    ['x' => $most_right_x + $text_height * 0.5, 'y' => $most_right_y - $text_height * 0.3],
+    ['x' => $most_right_x + $text_height * 0.5, 'y' => $most_right_y + $text_height * 0.1],
     // ['x' => $most_right_x + 150, 'y' => $most_right_y - $text_height * 0.2],
     ['x' => $most_left_x + $text_width * 0.5, 'y' => $most_right_y - $text_height * 0.2],
     // ['x' => $most_left_x + $text_width * 0.3, 'y' => $most_right_y - $text_height * 0.2],
@@ -310,6 +310,39 @@ function draw_bottom_curve10() {
   $points = [
     ['x' => $most_right_x, 'y' => $most_right_y],
     ['x' => $most_left_x - $text_width * 0.1, 'y' => $most_right_y],
+    ['x' => $most_left_x - $text_width * 0.1, 'y' => $most_right_y + $text_height * 0.1],
+  ];
+
+  $curves_draw->bezier($points);
+}
+
+function draw_bottom_curve11() {
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
+
+  $points = [
+    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x + 50, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_right_x + 100, 'y' => $most_right_y + $text_height * 0.8],
+    ['x' => $most_right_x + 110, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_right_x + 110, 'y' => $most_right_y + $text_height * 0.2],
+    ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.2],
+    ['x' => $most_left_x - $text_width * 0.1, 'y' => $most_right_y + $text_height * 0.6],
+  ];
+
+  $curves_draw->bezier($points);
+}
+
+function draw_bottom_curve12() {
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
+
+  $points = [
+    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x + $text_width * 0.5 , 'y' => $most_right_y + $text_height * 0.025],
+    ['x' => $most_right_x + $text_width * 0.5 , 'y' => $most_right_y + $text_height * 0.025],
+    ['x' => $most_left_x - $text_width * 1.3, 'y' => $most_right_y + $text_height * 1],
+    ['x' => $most_left_x - $text_width * 1.3, 'y' => $most_right_y + $text_height * 0.5],
+    ['x' => $most_right_x - $text_width * 0.4, 'y' => $most_right_y + $text_height * 0.15],
+    ['x' => $most_right_x - $text_width * 0.4 + 20, 'y' => $most_right_y + $text_height * 0.15 + 5],
   ];
 
   $curves_draw->bezier($points);
@@ -347,7 +380,8 @@ function draw_top_sun() {
   global $imagick, $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height, $most_top_y;
 
   $overlay = new \Imagick();
-  $overlay->readImage('C:\Apache24\htdocs\signature_script\images\sun.png');
+  // $overlay->readImage('C:\Apache24\htdocs\signature_script\images\sun.png');
+  $overlay->readImage('C:\php_projects\signature\images\sun.png');
   $overlay_width = $overlay->getImageWidth();
   $overlay_height = $overlay->getImageHeight();
   $degrees = -20;
@@ -443,7 +477,7 @@ $font = $style['font'];
 $curves = $style['curves'];
 $text_style = $style['text_styles'][$text_style_index];
 $thickness = 2; //$font['text_styles_thickness'];
-$font_size = 120;
+$font_size = 240; // 240
 
 $imagick = new \Imagick();
 $bg_color = new ImagickPixel('white');
@@ -456,7 +490,7 @@ $metrics = $imagick->queryFontMetrics($text_draw, $text);
 $text_width = $metrics['textWidth'];
 $text_height = $metrics['textHeight'];
 
-$width = 800; //round($text_width * 1.5);
+$width = round($text_width * 2);
 $height = round($text_height * 3);
 
 $imagick->newImage($width, $height, $bg_color);
@@ -516,6 +550,7 @@ $curves_draw->setStrokeWidth($thickness);
 // draw_bottom_curve7();
 // draw_bottom_curve8();
 // draw_bottom_curve9();
+// draw_bottom_curve10();
 // draw_top_sun();
 // draw_bottom_curve7_long();
 // draw_right_line();
@@ -527,7 +562,7 @@ function add_style1() {
   draw_bottom_curve8();
 }
 
-function add_style2() {
+function add_style2() { // TODO: Change, it's copy of 3
   global $styled_text_2;
 
   $angle = -15;
@@ -543,6 +578,7 @@ function add_style3() {
 
   $text_style = $styled_text_4;
   $angle = -15;
+  $font_size = 120;
 
   draw_top_sun();
   draw_bottom_curve7_long();
@@ -638,10 +674,10 @@ function add_style12() {
 }
 
 function add_style13() {
-  global $styled_text_4;
+  global $styled_text_6;
 
   $angle = 0;
-  $text_style = $styled_text_4;
+  $text_style = $styled_text_6;
 
   draw_bottom_curve9();
 }
@@ -653,14 +689,32 @@ function add_style14() {
   $text_style = $styled_text_4;
 
   draw_bottom_curve10();
+  draw_right_line();
 }
 
-add_style14();
+function add_style15() {
+  global $styled_text_5;
+
+  $angle = 0;
+  $text_style = $styled_text_5;
+
+  draw_bottom_curve11();
+}
+
+function add_style16() {
+  global $styled_text_3;
+
+  $angle = -15;
+  $text_style = $styled_text_3;
+
+  draw_bottom_curve12();
+}
+
+add_style1();
 
 $imagick->drawImage($curves_draw);
 // $imagick->trimImage(0);
-
-// $imagick->rotateImage('none', -15);
+// $imagick->rotateImage('white', -15);
 
 // print_r($most_top_y);
 header('Content-Type: image/png');
