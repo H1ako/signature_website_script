@@ -471,7 +471,7 @@ function draw_top_sun() {
   $imagick->compositeImage($overlay, \Imagick::COMPOSITE_DEFAULT, $x, $y);
 }
 
-$styles_index = 19;
+$styles_index = 0;
 
 // Написание текста
 $first_name = 'Nikita';
@@ -500,19 +500,19 @@ $font_allison = [
 ];
 $font_creation = [
   'path' => 'fonts/Creattion_Demo.otf',
-  'text_styles_thickness' => 2
+  'thickness_index' => 60
 ];
 $font_aerotis = [
   'path' => 'fonts/aerotis.regular.otf',
-  'text_styles_thickness' => 2
+  'thickness_index' => 60
 ];
 $font_funky = [
   'path' => 'fonts/funky-signature.regular.otf',
-  'text_styles_thickness' => 1
+  'thickness_index' => 60 // 1
 ];
 $font_holimount = [
   'path' => 'fonts/holimount.regular.otf',
-  'text_styles_thickness' => 2
+  'thickness_index' => 60
 ];
 $font_southam = [
   'path' => 'fonts/Southam.otf',
@@ -520,13 +520,13 @@ $font_southam = [
 ];  // only with small letter in the end
 $font_honeymoon = [
   'path' => 'fonts/honeymoon-avenue-script.regular.otf',
-  'text_styles_thickness' => 1
+  'thickness_index' => 120 // 1
 ];  // only with small letter in the end
 
 $fonts = [
+  $font_southam,
   $font_aerotis,
   $font_funky,
-  $font_southam,
   $font_honeymoon,
   $font_holimount,
   $font_creation,
@@ -543,27 +543,53 @@ function _get_style($font, $text_style, $curves_style, $angle=0, $font_size=240)
 }
 
 $styles = [
-  _get_style($font_southam, $text_style_1, 'add_style_1', -15),
-  _get_style($font_southam, $text_style_7, 'add_style_2', -15),
-  _get_style($font_southam, $text_style_4, 'add_style_3', -15, 120),
-  _get_style($font_southam, $text_style_1, 'add_style_4', -15),
-  _get_style($font_southam, $text_style_1, 'add_style_5'),
-  _get_style($font_southam, $text_style_5, 'add_style_6'),
-  _get_style($font_southam, $text_style_5, 'add_style_7'),
-  _get_style($font_southam, $text_style_3, 'add_style_8'),
-  _get_style($font_southam, $text_style_1, 'add_style_9'),
-  _get_style($font_southam, $text_style_4, 'add_style_10'),
-  _get_style($font_southam, $text_style_3, 'add_style_11'),
-  _get_style($font_southam, $text_style_6, 'add_style_12'),
-  _get_style($font_southam, $text_style_4, 'add_style_13'),
-  _get_style($font_southam, $text_style_4, 'add_style_14'),
-  _get_style($font_southam, $text_style_5, 'add_style_15'),
-  _get_style($font_southam, $text_style_3, 'add_style_16', -15),
-  _get_style($font_southam, $text_style_2_short, 'add_style_17'),
-  _get_style($font_southam, $text_style_1, 'add_style_18', -15),
-  _get_style($font_southam, $text_style_2, 'add_style_19', -15),
-  _get_style($font_southam, $text_style_4, 'add_style_20'),
+  // _get_style($font_southam, $text_style_1, 'add_style_1', -15),
+  // _get_style($font_southam, $text_style_7, 'add_style_2', -15),
+  // _get_style($font_southam, $text_style_4, 'add_style_3', -15, 120),
+  // _get_style($font_southam, $text_style_1, 'add_style_4', -15),
+  // _get_style($font_southam, $text_style_1, 'add_style_5'),
+  // _get_style($font_southam, $text_style_5, 'add_style_6'),
+  // _get_style($font_southam, $text_style_5, 'add_style_7'),
+  // _get_style($font_southam, $text_style_3, 'add_style_8'),
+  // _get_style($font_southam, $text_style_1, 'add_style_9'),
+  // _get_style($font_southam, $text_style_4, 'add_style_10'),
+  // _get_style($font_southam, $text_style_3, 'add_style_11'),
+  // _get_style($font_southam, $text_style_6, 'add_style_12'),
+  // _get_style($font_southam, $text_style_4, 'add_style_13'),
+  // _get_style($font_southam, $text_style_4, 'add_style_14'),
+  // _get_style($font_southam, $text_style_5, 'add_style_15'),
+  // _get_style($font_southam, $text_style_3, 'add_style_16', -15),
+  // _get_style($font_southam, $text_style_2_short, 'add_style_17'),
+  // _get_style($font_southam, $text_style_1, 'add_style_18', -15),
+  // _get_style($font_southam, $text_style_2, 'add_style_19', -15),
+  // _get_style($font_southam, $text_style_4, 'add_style_20'),
 ];
+
+foreach($fonts as $font) {
+  $styles = [
+    ...$styles,
+    _get_style($font, $text_style_1, 'add_style_1', -15),
+    _get_style($font, $text_style_7, 'add_style_2', -15),
+    _get_style($font, $text_style_4, 'add_style_3', -15, 120),
+    _get_style($font, $text_style_1, 'add_style_4', -15),
+    _get_style($font, $text_style_1, 'add_style_5'),
+    _get_style($font, $text_style_5, 'add_style_6'),
+    _get_style($font, $text_style_5, 'add_style_7'),
+    _get_style($font, $text_style_3, 'add_style_8'),
+    _get_style($font, $text_style_1, 'add_style_9'),
+    _get_style($font, $text_style_4, 'add_style_10'),
+    _get_style($font, $text_style_3, 'add_style_11'),
+    _get_style($font, $text_style_6, 'add_style_12'),
+    _get_style($font, $text_style_4, 'add_style_13'),
+    _get_style($font, $text_style_4, 'add_style_14'),
+    _get_style($font, $text_style_5, 'add_style_15'),
+    _get_style($font, $text_style_3, 'add_style_16', -15),
+    _get_style($font, $text_style_2_short, 'add_style_17'),
+    _get_style($font, $text_style_1, 'add_style_18', -15),
+    _get_style($font, $text_style_2, 'add_style_19', -15),
+    _get_style($font, $text_style_4, 'add_style_20'),
+  ];
+}
 
 function add_style_1() {
   draw_bottom_curve8();
