@@ -517,11 +517,67 @@ $font_holimount = [
 $font_southam = [
   'path' => 'fonts/Southam.otf',
   'thickness_index' => 60
-];  // only with small letter in the end
+];
 $font_honeymoon = [
   'path' => 'fonts/honeymoon-avenue-script.regular.otf',
   'thickness_index' => 120 // 1
-];  // only with small letter in the end
+];
+$font_adinda_melia = [
+  'path' => 'fonts/AdindaMelia.otf',
+  'thickness_index' => 120 // 1
+];
+$font_alfrida = [
+  'path' => 'fonts/AlfridaSignature.ttf',
+  'thickness_index' => 120 // 1
+];
+$font_arty = [
+  'path' => 'fonts/ArtySignature.otf',
+  'thickness_index' => 120 // 1
+];
+$font_barokah = [
+  'path' => 'fonts/BarokahSignature.ttf',
+  'thickness_index' => 120 // 1
+];
+$font_centhiny = [
+  'path' => 'fonts/Centhiny.otf',
+  'thickness_index' => 120 // 1
+];
+$font_geovana = [
+  'path' => 'fonts/Geovana.otf',
+  'thickness_index' => 120 // 1
+];
+$font_hight_summit = [
+  'path' => 'fonts/HighSummit.otf',
+  'thickness_index' => 120 // 1
+];
+$font_humaira = [
+  'path' => 'fonts/Humaira.otf',
+  'thickness_index' => 120 // 1
+];
+$font_mrs_saint_delafield = [
+  'path' => 'fonts/MrsSaintDelafield-Regular.ttf',
+  'thickness_index' => 120 // 1
+];
+$font_radith = [
+  'path' => 'fonts/Radith.otf',
+  'thickness_index' => 120 // 1
+];
+$font_rathie = [
+  'path' => 'fonts/Rathie.otf',
+  'thickness_index' => 120 // 1
+];
+$font_somelove = [
+  'path' => 'fonts/Somelove.otf',
+  'thickness_index' => 120 // 1
+];
+$font_south_town = [
+  'path' => 'fonts/SouthTown.otf',
+  'thickness_index' => 120 // 1
+];
+$font_thesignature = [
+  'path' => 'fonts/Thesignature.otf',
+  'thickness_index' => 120 // 1
+];
 
 $fonts = [
   $font_southam,
@@ -530,6 +586,20 @@ $fonts = [
   $font_honeymoon,
   $font_holimount,
   $font_creation,
+  $font_adinda_melia,
+  $font_alfrida,
+  $font_arty,
+  $font_barokah,
+  $font_centhiny,
+  $font_geovana,
+  $font_hight_summit,
+  $font_humaira,
+  $font_mrs_saint_delafield,
+  $font_radith,
+  $font_rathie,
+  $font_somelove,
+  $font_south_town,
+  $font_thesignature,
 ];
 
 function _get_style($font, $text_style, $curves_style, $angle=0, $font_size=240) {
