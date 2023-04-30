@@ -1,9 +1,9 @@
 <?php
 function draw_bottom_heart() {
-  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height;
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $text_width, 'y' => $most_right_y + 45],
     ['x' => $text_width / 1, 'y' => $most_right_y + 60],
     ['x' => $most_right_x, 'y' => $most_right_y + 80],
@@ -12,17 +12,17 @@ function draw_bottom_heart() {
     ['x' => $text_width, 'y' => $most_right_y + 80],
     ['x' => $most_right_x, 'y' => $most_right_y + 100],
     ['x' => $most_right_x + 100, 'y' => $most_right_y + 100],
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
   ];
 
   $curves_draw->bezier($points);
 }
 
 function draw_curve() {
-  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height;
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x - $text_width / 3, 'y' => $most_right_y * 0.7],
     ['x' => $most_left_x - $text_width, 'y' => $most_right_y],
     ['x' => $most_right_x - $text_width / 1.5, 'y' => ($height - $text_height) / 2 + $text_height],
@@ -33,10 +33,10 @@ function draw_curve() {
 }
 
 function draw_stretched_curve() {
-  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height;
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x - $text_width / 3, 'y' => $most_right_y * 0.7],
     ['x' => $most_left_x - $text_width, 'y' => $most_right_y],
     ['x' => $most_right_x - $text_width, 'y' => ($height - $text_height) / 2 + $text_height],
@@ -47,10 +47,10 @@ function draw_stretched_curve() {
 }
 
 function draw_bottom_curve1() {
-  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height;
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x + 20, 'y' => $most_right_y - 180],
     ['x' => $most_right_x - 20, 'y' => $most_right_y - 100],
     ['x' => $most_right_x - 20, 'y' => $most_right_y + 80],
@@ -81,17 +81,16 @@ function draw_bottom_curve2() {
     ['x' => $most_right_x + $text_width * 0.5, 'y' => $most_right_y + $text_height * 0.2],
     ['x' => $most_right_x + $text_width * 0.5, 'y' => $most_right_y + $text_height * 0.2],
     ['x' => $most_right_x + $text_width * 0.1, 'y' => $most_right_y + $text_height * 0.19],
-    // ['x' => $most_right_x, 'y' => $most_right_y],
   ];
 
   $curves_draw->bezier($points);
 }
 
 function draw_bottom_curve3() {
-  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height;
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + $text_height * 0.3],
     ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + $text_height * 0.3],
     ['x' => $most_right_x, 'y' => $most_right_y + 40],
@@ -111,10 +110,10 @@ function draw_bottom_curve3() {
 }
 
 function draw_bottom_curve4() {
-  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height;
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + $text_height * 0.1],
     ['x' => $most_left_x + $text_width * -0.55, 'y' => $most_right_y + $text_height * 0.3],
     ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.4],
@@ -130,10 +129,10 @@ function draw_bottom_curve4() {
 }
 
 function draw_bottom_curve5() {
-  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height;
+  global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $height, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x - $text_width, 'y' => $most_right_y + $text_height / 1.75],
     ['x' => $most_right_x - $text_width, 'y' => $most_right_y + $text_height / 1.75],
     ['x' => $most_right_x, 'y' => $most_right_y + $text_height / 2],
@@ -166,13 +165,13 @@ function draw_bottom_curve7() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y - $thickness / 2],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x + 140, 'y' => $most_right_y - $text_height * .85],
     ['x' => $most_right_x + 10, 'y' => $most_right_y - $text_height * .85],
-    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y - $thickness / 2],
-    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y - $thickness / 2],
-    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y - $thickness / 2],
-    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y - $thickness / 2],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x, 'y' => $text_box_bottom_y],
     // ['x' => $most_right_x, 'y' => $text_box_bottom_y],
     // ['x' => $most_right_x, 'y' => $text_box_bottom_y],
@@ -206,13 +205,13 @@ function draw_bottom_curve7_long() { // $font_size = 120;
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y - $thickness / 2],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x + 140, 'y' => $most_right_y - $text_height * .85],
     ['x' => $most_right_x + 10, 'y' => $most_right_y - $text_height * .85],
-    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y - $thickness / 2],
-    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y - $thickness / 2],
-    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y - $thickness / 2],
-    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y - $thickness / 2],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x, 'y' => $text_box_bottom_y],
   ];
   $second_points = [
@@ -233,7 +232,7 @@ function draw_bottom_curve8() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x, 'y' => $most_right_y + $text_height * 0.7],
     ['x' => $most_right_x + $text_width * 0.5, 'y' => $most_right_y - $text_height * 1.2],
     ['x' => $most_right_x + $text_height * 0.05, 'y' => $most_right_y - $text_height * 1.2],
@@ -242,9 +241,7 @@ function draw_bottom_curve8() {
     ['x' => $most_right_x + $text_height * 0.5, 'y' => $most_right_y - $text_height * 0.2],
     ['x' => $most_right_x + $text_height * 0.5, 'y' => $most_right_y - $text_height * 0.3],
     ['x' => $most_right_x + $text_height * 0.5, 'y' => $most_right_y + $text_height * 0.1],
-    // ['x' => $most_right_x + 150, 'y' => $most_right_y - $text_height * 0.2],
     ['x' => $most_left_x + $text_width * 0.5, 'y' => $most_right_y - $text_height * 0.2],
-    // ['x' => $most_left_x + $text_width * 0.3, 'y' => $most_right_y - $text_height * 0.2],
     ['x' => $most_left_x + $text_width * 0.2, 'y' => $most_left_y + $text_height * 0.1],
   ];
 
@@ -255,7 +252,7 @@ function draw_bottom_curve9() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x + $text_width * 0.1, 'y' => $most_right_y],
     ['x' => $most_right_x + $text_width * 0.1, 'y' => $most_right_y - $text_height * 0.2],
     ['x' => $most_right_x - $text_width * 0.1, 'y' => $most_right_y - $text_height * 0.7],
@@ -294,7 +291,7 @@ function draw_bottom_curve10() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_left_x - $text_width * 0.1, 'y' => $most_right_y],
     ['x' => $most_left_x - $text_width * 0.1, 'y' => $most_right_y + $text_height * 0.1],
   ];
@@ -306,7 +303,7 @@ function draw_bottom_curve11() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x + 50, 'y' => $most_right_y + $text_height * 0.5],
     ['x' => $most_right_x + 100, 'y' => $most_right_y + $text_height * 0.8],
     ['x' => $most_right_x + 110, 'y' => $most_right_y + $text_height * 0.5],
@@ -322,7 +319,7 @@ function draw_bottom_curve12() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x + $text_width * 0.5 , 'y' => $most_right_y + $text_height * 0.025],
     ['x' => $most_right_x + $text_width * 0.5 , 'y' => $most_right_y + $text_height * 0.025],
     ['x' => $most_left_x - $text_width * 1.3, 'y' => $most_right_y + $text_height * 1],
@@ -338,7 +335,7 @@ function draw_bottom_curve13() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x - $text_width * 0.6, 'y' => $most_right_y - $text_height * 0.6],
     ['x' => $most_right_x + $text_width * 0.5, 'y' => $most_right_y - $text_height * 0.6],
     ['x' => $most_right_x, 'y' => $most_right_y - $text_height * 0.1],
@@ -366,7 +363,7 @@ function draw_bottom_curve14() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_left_x - $text_width * 0.7, 'y' => $most_left_y + $text_height * 0.2],
     ['x' => $most_left_x - $text_width * 0.7, 'y' => $most_left_y + $text_height * 0.4],
     ['x' => $most_left_x - $text_width * 0.5, 'y' => $most_left_y + $text_height * 0.8],
@@ -388,7 +385,7 @@ function draw_bottom_curve15() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x + $text_width * 0.1, 'y' => $most_right_y - $text_height * 0.15],
     ['x' => $most_right_x + $text_width * 0.2, 'y' => $most_right_y - $text_height * 0.10],
     ['x' => $most_right_x + $text_width * 0.2, 'y' => $most_right_y + $text_height * 0.3],
@@ -407,8 +404,8 @@ function draw_bottom_curve16() {
   global $most_left_x, $most_left_y, $most_right_x, $most_right_y, $curves_draw, $text_y, $text_height, $text_width, $text_box_bottom_y, $thickness;
 
   $points = [
-    ['x' => $most_right_x, 'y' => $most_right_y],
-    // ['x' => $most_right_x, 'y' => $most_right_y],
+    ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
+    // ['x' => $most_right_x - $thickness / 2, 'y' => $most_right_y],
     ['x' => $most_right_x + $text_width * 0.3, 'y' => $most_right_y - $text_height * 0.20],
     ['x' => $most_right_x - $text_width * 0.8, 'y' => $most_right_y - $text_height * 0.4],
     ['x' => $most_right_x - $text_width * 0.6, 'y' => $most_right_y - $text_height * 0.4],
@@ -471,8 +468,6 @@ function draw_top_sun() {
   $imagick->compositeImage($overlay, \Imagick::COMPOSITE_DEFAULT, $x, $y);
 }
 
-$styles_index = 0;
-
 // Написание текста
 $first_name = 'Nikita';
 $last_name = 'Sobolev';
@@ -524,15 +519,15 @@ $font_honeymoon = [
 ];
 $font_adinda_melia = [
   'path' => 'fonts/AdindaMelia.otf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 25 // 1
 ];
 $font_alfrida = [
   'path' => 'fonts/AlfridaSignature.ttf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 30 // 1
 ];
 $font_arty = [
   'path' => 'fonts/ArtySignature.otf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 60 // 1
 ];
 $font_barokah = [
   'path' => 'fonts/BarokahSignature.ttf',
@@ -540,27 +535,27 @@ $font_barokah = [
 ];
 $font_centhiny = [
   'path' => 'fonts/Centhiny.otf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 35 // 1
 ];
 $font_geovana = [
   'path' => 'fonts/Geovana.otf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 30 // 1
 ];
 $font_hight_summit = [
   'path' => 'fonts/HighSummit.otf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 45 // 1
 ];
 $font_humaira = [
   'path' => 'fonts/Humaira.otf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 40 // 1
 ];
 $font_mrs_saint_delafield = [
   'path' => 'fonts/MrsSaintDelafield-Regular.ttf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 50 // 1
 ];
 $font_radith = [
   'path' => 'fonts/Radith.otf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 30 // 1
 ];
 $font_rathie = [
   'path' => 'fonts/Rathie.otf',
@@ -568,16 +563,17 @@ $font_rathie = [
 ];
 $font_somelove = [
   'path' => 'fonts/Somelove.otf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 45 // 1
 ];
 $font_south_town = [
   'path' => 'fonts/SouthTown.otf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 50 // 1
 ];
 $font_thesignature = [
   'path' => 'fonts/Thesignature.otf',
-  'thickness_index' => 120 // 1
+  'thickness_index' => 50 // 1
 ];
+$index = 0;
 
 $fonts = [
   $font_southam,
@@ -589,7 +585,7 @@ $fonts = [
   $font_adinda_melia,
   $font_alfrida,
   $font_arty,
-  $font_barokah,
+  // $font_barokah,
   $font_centhiny,
   $font_geovana,
   $font_hight_summit,
@@ -602,6 +598,7 @@ $fonts = [
   $font_thesignature,
 ];
 
+
 function _get_style($font, $text_style, $curves_style, $angle=0, $font_size=240) {
   return [
     'text_style' => $text_style,
@@ -613,237 +610,343 @@ function _get_style($font, $text_style, $curves_style, $angle=0, $font_size=240)
 }
 
 $styles = [
-  // _get_style($font_southam, $text_style_1, 'add_style_1', -15),
-  // _get_style($font_southam, $text_style_7, 'add_style_2', -15),
-  // _get_style($font_southam, $text_style_4, 'add_style_3', -15, 120),
-  // _get_style($font_southam, $text_style_1, 'add_style_4', -15),
-  // _get_style($font_southam, $text_style_1, 'add_style_5'),
-  // _get_style($font_southam, $text_style_5, 'add_style_6'),
-  // _get_style($font_southam, $text_style_5, 'add_style_7'),
-  // _get_style($font_southam, $text_style_3, 'add_style_8'),
-  // _get_style($font_southam, $text_style_1, 'add_style_9'),
-  // _get_style($font_southam, $text_style_4, 'add_style_10'),
-  // _get_style($font_southam, $text_style_3, 'add_style_11'),
-  // _get_style($font_southam, $text_style_6, 'add_style_12'),
-  // _get_style($font_southam, $text_style_4, 'add_style_13'),
-  // _get_style($font_southam, $text_style_4, 'add_style_14'),
-  // _get_style($font_southam, $text_style_5, 'add_style_15'),
-  // _get_style($font_southam, $text_style_3, 'add_style_16', -15),
-  // _get_style($font_southam, $text_style_2_short, 'add_style_17'),
-  // _get_style($font_southam, $text_style_1, 'add_style_18', -15),
-  // _get_style($font_southam, $text_style_2, 'add_style_19', -15),
-  // _get_style($font_southam, $text_style_4, 'add_style_20'),
+  // get_style_10($fonts[10])
 ];
+$font_i = 0;
+for ($i=0; $i < 20; $i++) {
+  $style_number = $i + 1;
+ 
+  for ($j=0; $j < 3; $j++) {
+    $styles = [
+      ...$styles,
+      "get_style_$style_number"($fonts[$font_i])
+    ];
 
-foreach($fonts as $font) {
-  $styles = [
-    ...$styles,
-    _get_style($font, $text_style_1, 'add_style_1', -15),
-    _get_style($font, $text_style_7, 'add_style_2', -15),
-    _get_style($font, $text_style_4, 'add_style_3', -15, 120),
-    _get_style($font, $text_style_1, 'add_style_4', -15),
-    _get_style($font, $text_style_1, 'add_style_5'),
-    _get_style($font, $text_style_5, 'add_style_6'),
-    _get_style($font, $text_style_5, 'add_style_7'),
-    _get_style($font, $text_style_3, 'add_style_8'),
-    _get_style($font, $text_style_1, 'add_style_9'),
-    _get_style($font, $text_style_4, 'add_style_10'),
-    _get_style($font, $text_style_3, 'add_style_11'),
-    _get_style($font, $text_style_6, 'add_style_12'),
-    _get_style($font, $text_style_4, 'add_style_13'),
-    _get_style($font, $text_style_4, 'add_style_14'),
-    _get_style($font, $text_style_5, 'add_style_15'),
-    _get_style($font, $text_style_3, 'add_style_16', -15),
-    _get_style($font, $text_style_2_short, 'add_style_17'),
-    _get_style($font, $text_style_1, 'add_style_18', -15),
-    _get_style($font, $text_style_2, 'add_style_19', -15),
-    _get_style($font, $text_style_4, 'add_style_20'),
-  ];
+    $font_i = $font_i + 2 > count($fonts) ? 0 : $font_i + 1;
+  }
 }
 
-function add_style_1() {
+
+
+function get_style_1($font) {
+  global $text_style_1;
+
+  return _get_style($font, $text_style_1, 'add_curve_style_1', -15);
+}
+
+function get_style_2($font) {
+  global $text_style_7;
+  
+  return _get_style($font, $text_style_7, 'add_curve_style_2', -15);
+}
+
+function get_style_3($font) {
+  global $text_style_4;
+  
+  return _get_style($font, $text_style_4, 'add_curve_style_3', -15, 120);
+}
+
+function get_style_4($font) {
+  global $text_style_1;
+  
+  return _get_style($font, $text_style_1, 'add_curve_style_4', -15);
+}
+
+function get_style_5($font) {
+  global $text_style_1;
+  
+  return _get_style($font, $text_style_1, 'add_curve_style_5');
+}
+
+function get_style_6($font) {
+  global $text_style_5;
+  
+  return _get_style($font, $text_style_5, 'add_curve_style_6');
+}
+
+function get_style_7($font) {
+  global $text_style_5;
+  
+  return _get_style($font, $text_style_5, 'add_curve_style_7');
+}
+
+function get_style_8($font) {
+  global $text_style_3;
+  
+  return _get_style($font, $text_style_3, 'add_curve_style_8');
+}
+
+function get_style_9($font) {
+  global $text_style_1;
+  
+  return _get_style($font, $text_style_1, 'add_curve_style_9');
+}
+
+function get_style_10($font) {
+  global $text_style_4;
+  
+    return _get_style($font, $text_style_4, 'add_curve_style_10');
+}
+
+function get_style_11($font) {
+  global $text_style_3;
+  
+  return _get_style($font, $text_style_3, 'add_curve_style_11');
+}
+
+function get_style_12($font) {
+  global $text_style_6;
+  
+  return _get_style($font, $text_style_6, 'add_curve_style_12');
+}
+
+function get_style_13($font) {
+  global $text_style_4;
+  
+  return _get_style($font, $text_style_4, 'add_curve_style_13');
+}
+
+function get_style_14($font) {
+  global $text_style_4;
+  
+  return _get_style($font, $text_style_4, 'add_curve_style_14');
+}
+
+function get_style_15($font) {
+  global $text_style_5;
+  
+  return _get_style($font, $text_style_5, 'add_curve_style_15');
+}
+
+function get_style_16($font) {
+  global $text_style_3;
+  
+  return _get_style($font, $text_style_3, 'add_curve_style_16', -15);
+}
+
+function get_style_17($font) {
+  global $text_style_2_short;
+  
+  return _get_style($font, $text_style_2_short, 'add_curve_style_17');
+}
+
+function get_style_18($font) {
+  global $text_style_1;
+  
+  return _get_style($font, $text_style_1, 'add_curve_style_18', -15);
+}
+
+function get_style_19($font) {
+  global $text_style_2;
+  
+  return _get_style($font, $text_style_2, 'add_curve_style_19', -15);
+}
+
+function get_style_20($font) {
+  global $text_style_4;
+  
+  return _get_style($font, $text_style_4, 'add_curve_style_20');
+}
+
+function add_curve_style_1() {
   draw_bottom_curve8();
 }
 
-function add_style_2() {
+function add_curve_style_2() {
   draw_bottom_curve2();
   draw_right_line();
 }
 
-function add_style_3() {
+function add_curve_style_3() {
   draw_top_sun();
   draw_bottom_curve7_long();
   draw_right_line();
 }
 
-function add_style_4() {
+function add_curve_style_4() {
   draw_bottom_curve6();
 }
 
-function add_style_5() {
+function add_curve_style_5() {
   draw_bottom_curve5();
   draw_right_line();
 }
 
-function add_style_6() {
+function add_curve_style_6() {
   draw_bottom_curve5();
   draw_top_curve();
 }
 
-function add_style_7() {
+function add_curve_style_7() {
   draw_bottom_curve4();
   draw_right_line();
 }
 
-function add_style_8() {
+function add_curve_style_8() {
   draw_bottom_curve3();
 }
 
-function add_style_9() {
+function add_curve_style_9() {
   draw_bottom_curve7();
   draw_right_line();
 }
 
-function add_style_10() {
+function add_curve_style_10() {
   draw_stretched_curve();
   draw_right_line();
 }
 
-function add_style_11() {
+function add_curve_style_11() {
   draw_curve();
   draw_top_curve();
 }
 
-function add_style_12() {
+function add_curve_style_12() {
   draw_bottom_heart();
 }
 
-function add_style_13() {
+function add_curve_style_13() {
   draw_bottom_curve9();
 }
 
-function add_style_14() {
+function add_curve_style_14() {
   draw_bottom_curve10();
   draw_right_line();
 }
 
-function add_style_15() {
+function add_curve_style_15() {
   draw_bottom_curve11();
 }
 
-function add_style_16() {
+function add_curve_style_16() {
   draw_bottom_curve12();
 }
 
-function add_style_17() {
+function add_curve_style_17() {
   draw_bottom_curve13();
 }
 
-function add_style_18() {
+function add_curve_style_18() {
   draw_bottom_curve14();
 }
 
-function add_style_19() {
+function add_curve_style_19() {
   draw_bottom_curve15();
   draw_right_line();
 }
 
-function add_style_20() {
+function add_curve_style_20() {
   draw_bottom_curve16();
 }
 
-// Создание нового изображения
-$style = $styles[$styles_index];
-$font = $style['font'];
-$text = $style['text_style'];
-$font_size = $style['font_size'];
-$angle = $style['angle'];
-$draw_styles = $style['draw_styles'];
-$thickness = max(1, round($font_size / $font['thickness_index']));
+$width;
+$height;
+$most_right_x;
+$most_left_x;
+$most_right_y;
+$most_left_y;
+$most_top_y;
+$text_width;
+$text_height;
+$text_box_bottom_y;
+$text_box_top_y;
 
 $imagick = new \Imagick();
 $bg_color = new ImagickPixel('white');
 
 $text_draw = new \ImagickDraw();
-$text_draw->setFont($font['path']);
-$text_draw->setFontSize($font_size);
 $text_draw->setFillColor('black');
-$text_draw->setTextInterlineSpacing(-$font_size / 1.25);
 
-$metrics = $imagick->queryFontMetrics($text_draw, $text);
-$text_width = $metrics['textWidth'];
-$text_height = $metrics['textHeight'];
-
-$width = round($text_width * 3);
-$height = round($text_height * 3);
-
-$imagick->newImage($width, $height, $bg_color);
-$imagick->setImageFormat('png');
-
-$text_x = round(($width - $text_width) / 2);
-$text_y = round(($height - $text_height) / 2 + $font_size);
-$text_box_bottom_y = $metrics['boundingBox']['y2'] / 2 + $text_y;
-$text_box_top_y = $metrics['boundingBox']['y1'] + $text_y / 2;
-
-$imagick->annotateImage($text_draw, $text_x, $text_y, 0, $text);
-
-$most_right_x = 0;
-$most_left_x = $width;
-$most_right_y = 0;
-$most_left_y = $height;
-$most_top_y = $height;
-for($y=0; $y<$height; $y++) {
-  for($x=0; $x<$width; $x++) {
-    $color = $imagick->getImagePixelColor($x, $y);
-    $isDifferentWithBg = $bg_color->isPixelSimilar($color, 0);
-
-    if (!$isDifferentWithBg && $most_right_x < $x) {
-      $most_right_x = $x;
-      $most_right_y = $y;
-    }
-    else if (!$isDifferentWithBg && $most_left_x > $x) {
-      $most_left_x = $x;
-      $most_left_y = $y;
-    }
-
-    if (!$isDifferentWithBg && $most_top_y > $y) {
-      $most_top_y = $y;
-    }
-  }
-}
-
+$thickness = 0;
 $curves_draw = new \ImagickDraw();
 $curves_draw->setFillColor('transparent');
 $curves_draw->setStrokeOpacity(1);
 $curves_draw->setStrokeColor('black');
-$curves_draw->setStrokeWidth($thickness);
 $curves_draw->setStrokeAntialias(true);
 $curves_draw->setStrokeLinecap(\imagick::LINECAP_ROUND);
 $curves_draw->setStrokeLinejoin(\imagick::LINEJOIN_ROUND);
 $curves_draw->setStrokeMiterLimit(2);
 $curves_draw->setStrokeAntialias(true);
 
-// draw_bottom_heart();
-// draw_curve();
-// draw_stretched_curve();
-// draw_bottom_curve1();
-// draw_bottom_curve2();
-// draw_bottom_curve3();
-// draw_bottom_curve4();
-// draw_bottom_curve5();
-// draw_bottom_curve6();
-// draw_bottom_curve7();
-// draw_bottom_curve8();
-// draw_bottom_curve9();
-// draw_bottom_curve10();
-// draw_top_sun();
-// draw_bottom_curve7_long();
-// draw_right_line();
-// draw_top_curve();
-$draw_styles();
-$imagick->drawImage($curves_draw);
-$imagick->rotateImage('white', $angle);
-$imagick->trimImage(0);
+function get_image_from_style($styles_index) {
+  global $thickness, $text_draw, $imagick, $bg_color, $styles, $width, $height, $most_right_x, $most_left_x, $most_right_y, $most_left_y, $most_top_y, $text_width, $text_height, $text_box_bottom_y, $text_box_top_y, $curves_draw;
+
+  $style = $styles[$styles_index];
+  $font = $style['font'];
+  $text = $style['text_style'];
+  $font_size = $style['font_size'];
+  $angle = $style['angle'];
+  $draw_styles = $style['draw_styles'];
+  $thickness = max(1, round($font_size / $font['thickness_index']));
+
+  $text_draw->setTextInterlineSpacing(-$font_size / 1.25);
+  $text_draw->setFontSize($font_size);
+  $text_draw->setFont($font['path']);
+
+  $metrics = $imagick->queryFontMetrics($text_draw, $text);
+  $text_width = $metrics['textWidth'];
+  $text_height = $metrics['textHeight'];
+
+  $width = round($text_width * 2.5);
+  $height = round($text_height * 2.5);
+
+  $imagick->newImage($width, $height, $bg_color);
+  $imagick->setImageFormat('png');
+
+  $text_x = round(($width - $text_width) / 2);
+  $text_y = round(($height - $text_height) / 2 + $font_size);
+  $text_box_bottom_y = $metrics['boundingBox']['y2'] / 2 + $text_y;
+  $text_box_top_y = $metrics['boundingBox']['y1'] + $text_y / 2;
+
+  $imagick->annotateImage($text_draw, $text_x, $text_y, 0, $text);
+
+  $most_right_x = 0;
+  $most_left_x = $width;
+  $most_right_y = 0;
+  $most_left_y = $height;
+  $most_top_y = $height;
+  for($y=0; $y<$height; $y++) {
+    for($x=0; $x<$width; $x++) {
+      $color = $imagick->getImagePixelColor($x, $y);
+      $isDifferentWithBg = $bg_color->isPixelSimilar($color, 0);
+
+      if (!$isDifferentWithBg && $most_right_x < $x) {
+        $most_right_x = $x;
+        $most_right_y = $y;
+      }
+      else if (!$isDifferentWithBg && $most_left_x > $x) {
+        $most_left_x = $x;
+        $most_left_y = $y;
+      }
+
+      if (!$isDifferentWithBg && $most_top_y > $y) {
+        $most_top_y = $y;
+      }
+    }
+  }
+
+  $curves_draw->setStrokeWidth($thickness);
+
+  $draw_styles();
+  $imagick->drawImage($curves_draw);
+  $imagick->rotateImage('white', $angle);
+  $imagick->trimImage(0);
+
+  return $imagick;
+}
+
+$image = get_image_from_style($index);
+// $styles_index = 2;
+
+// $images = [];
+
+// for ($i=0; $i < count($styles); $i++) {
+//   $image = get_image_from_style(3);
+
+//   $images = [...$images, $image];
+// }
+// echo $images;
+
 
 header('Content-Type: image/png');
-echo $imagick;
+echo $image;
