@@ -610,7 +610,6 @@ function _get_style($font, $text_style, $curves_style, $angle=0, $font_size=240)
 }
 
 $styles = [
-  // get_style_10($fonts[10])
 ];
 $font_i = 0;
 for ($i=0; $i < 20; $i++) {
@@ -849,7 +848,6 @@ $most_top_y;
 $text_width;
 $text_height;
 $text_box_bottom_y;
-$text_box_top_y;
 
 $imagick = new \Imagick();
 $bg_color = new ImagickPixel('white');
@@ -869,7 +867,7 @@ $curves_draw->setStrokeMiterLimit(2);
 $curves_draw->setStrokeAntialias(true);
 
 function get_image_from_style($styles_index) {
-  global $thickness, $text_draw, $imagick, $bg_color, $styles, $width, $height, $most_right_x, $most_left_x, $most_right_y, $most_left_y, $most_top_y, $text_width, $text_height, $text_box_bottom_y, $text_box_top_y, $curves_draw;
+  global $thickness, $text_draw, $imagick, $bg_color, $styles, $width, $height, $most_right_x, $most_left_x, $most_right_y, $most_left_y, $most_top_y, $text_width, $text_height, $text_box_bottom_y, $curves_draw;
 
   $style = $styles[$styles_index];
   $font = $style['font'];
@@ -896,7 +894,6 @@ function get_image_from_style($styles_index) {
   $text_x = round(($width - $text_width) / 2);
   $text_y = round(($height - $text_height) / 2 + $font_size);
   $text_box_bottom_y = $metrics['boundingBox']['y2'] / 2 + $text_y;
-  $text_box_top_y = $metrics['boundingBox']['y1'] + $text_y / 2;
 
   $imagick->annotateImage($text_draw, $text_x, $text_y, 0, $text);
 
@@ -936,17 +933,6 @@ function get_image_from_style($styles_index) {
 }
 
 $image = get_image_from_style($index);
-// $styles_index = 2;
 
-// $images = [];
-
-// for ($i=0; $i < count($styles); $i++) {
-//   $image = get_image_from_style(3);
-
-//   $images = [...$images, $image];
-// }
-// echo $images;
-
-
-header('Content-Type: image/png');
+header('Content-type: image/png');
 echo $image;
