@@ -611,9 +611,9 @@ function drawCurve8() {
   $points = [
     ['x' => $textMostRightX, 'y' => $textMostRightY],
     ['x' => $textMostRightX + $textWidth * .6, 'y' => $textMostRightY - $textHeight * .3],
-    ['x' => $textMostRightX + $textWidth * .4, 'y' => $textMostRightY - $textHeight * 1.6],
-    ['x' => $textMostRightX + $textWidth * .4, 'y' => $textMostRightY - $textHeight * 1.6],
-    ['x' => $textMostRightX - $textWidth * .6, 'y' => $textMostRightY - $textHeight * 1.6],
+    ['x' => $textMostRightX + $textWidth * .4, 'y' => $textMostRightY - $textHeight * 1.2],
+    ['x' => $textMostRightX + $textWidth * .4, 'y' => $textMostRightY - $textHeight * 1.2],
+    ['x' => $textMostRightX - $textWidth * .6, 'y' => $textMostRightY - $textHeight * 1.2],
     ['x' => $textMostRightX - $textWidth * .6, 'y' => $textMostRightY - $textHeight * .4],
     ['x' => $textMostRightX - $textWidth * .5, 'y' => $textMostRightY - $textHeight * .2],
     ['x' => $textMostRightX - $textWidth * .3, 'y' => $textMostRightY - $textHeight * .8],
@@ -631,9 +631,9 @@ function drawCurve9() {
   $points = [
     ['x' => $textMostRightX, 'y' => $textMostRightY],
     ['x' => $textMostRightX + $textWidth * .6, 'y' => $textMostRightY - $textHeight * .3],
-    ['x' => $textMostRightX + $textWidth * .3, 'y' => $textMostRightY - $textHeight * 1.8],
-    ['x' => $textMostRightX + $textWidth * .3, 'y' => $textMostRightY - $textHeight * 1.8],
-    ['x' => $textMostRightX - $textWidth * .5, 'y' => $textMostRightY - $textHeight * 1.8],
+    ['x' => $textMostRightX + $textWidth * .3, 'y' => $textMostRightY - $textHeight * 1.2],
+    ['x' => $textMostRightX + $textWidth * .3, 'y' => $textMostRightY - $textHeight * 1.2],
+    ['x' => $textMostRightX - $textWidth * .5, 'y' => $textMostRightY - $textHeight * 1.2],
     ['x' => $textMostRightX - $textWidth * .5, 'y' => $textMostRightY - $textHeight * .4],
     ['x' => $textMostRightX - $textWidth * .4, 'y' => $textMostRightY - $textHeight * .2],
     ['x' => $textMostRightX - $textWidth * .2, 'y' => $textMostRightY - $textHeight * .2],
@@ -779,6 +779,64 @@ function drawCurve15() {
     ['x' => $textMostRightX + $textWidth * .3, 'y' => $textMostRightY - $textHeight * .4],
     ['x' => $textMostRightX + $textWidth * .45, 'y' => $textMostRightY - $textHeight * .5],
     ['x' => $textMostRightX + $textWidth * .8, 'y' => $textMostRightY - $textHeight * .6],
+  ];
+
+  $curvesDraw->bezier($points);
+}
+
+function drawCurve16() {
+  global $textMostLeftX, $textMostRightX, $textMostRightY, $curvesDraw, $textHeight, $textWidth, $thickness;
+
+  $points = [
+    ['x' => $textMostRightX, 'y' => $textMostRightY],
+    ['x' => $textMostRightX + $textWidth * .2, 'y' => $textMostRightY - $textHeight * .3],
+    ['x' => $textMostRightX + $textWidth * .2, 'y' => $textMostRightY - $textHeight * .5],
+    ['x' => $textMostRightX, 'y' => $textMostRightY - $textHeight * .8],
+    ['x' => $textMostRightX - $textWidth * .4, 'y' => $textMostRightY - $textHeight * .9],
+    ['x' => $textMostLeftX + $textWidth * .4, 'y' => $textMostRightY - $textHeight * .9],
+    ['x' => $textMostLeftX - $textWidth * .4, 'y' => $textMostRightY - $textHeight * .7],
+    ['x' => $textMostLeftX - $textWidth * .4, 'y' => $textMostRightY - $textHeight * .1],
+    ['x' => $textMostLeftX - $textWidth * .4, 'y' => $textMostRightY],
+    ['x' => $textMostLeftX, 'y' => $textMostRightY + $textHeight],
+    ['x' => $textMostLeftX + $textWidth * .4, 'y' => $textMostRightY + $textHeight * .3],
+  ];
+
+  $curvesDraw->bezier($points);
+}
+
+function drawCurve17() {
+  global $textMostLeftX, $textMostRightX, $textMostRightY, $curvesDraw, $textHeight, $textWidth, $thickness;
+
+  $points = [
+    ['x' => $textMostRightX, 'y' => $textMostRightY],
+    ['x' => $textMostRightX + $textWidth * .2, 'y' => $textMostRightY - $textHeight * .2],
+    ['x' => $textMostRightX + $textWidth * .2, 'y' => $textMostRightY - $textHeight * .2],
+    ['x' => $textMostRightX + $textWidth * .7, 'y' => $textMostRightY - $textHeight * .6],
+    ['x' => $textMostRightX + $textWidth * .4, 'y' => $textMostRightY - $textHeight * .8],
+    ['x' => $textMostRightX + $textWidth * .3, 'y' => $textMostRightY - $textHeight * .9],
+    ['x' => $textMostRightX + $textWidth * .2, 'y' => $textMostRightY - $textHeight * .8],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX + $textWidth * .1, 'y' => $textMostRightY + $textHeight * .4],
+    ['x' => $textMostRightX, 'y' => $textMostRightY + $textHeight * .3],
+    ['x' => $textMostRightX, 'y' => $textMostRightY + $textHeight * .3],
+    ['x' => $textMostRightX, 'y' => $textMostRightY + $textHeight * .3],
+    ['x' => $textMostRightX, 'y' => $textMostRightY + $textHeight * .3],
+    ['x' => $textMostRightX - $textWidth * .5, 'y' => $textMostRightY + $textHeight * .2],
+    ['x' => $textMostLeftX - $textWidth * .2, 'y' => $textMostRightY + $textHeight * .3],
+    ['x' => $textMostLeftX - $textWidth * .1, 'y' => $textMostRightY + $textHeight * .35],
+    ['x' => $textMostLeftX - $textWidth * .2, 'y' => $textMostRightY + $textHeight * .7],
+    ['x' => $textMostRightX + $textWidth * .7, 'y' => $textMostRightY + $textHeight * .15],
   ];
 
   $curvesDraw->bezier($points);
@@ -952,7 +1010,7 @@ $fonts = [
   ],
   [
     'path' => 'assets/fonts/HighSummit.otf',
-    'thickness_index' => 45 // 1
+    'thickness_index' => 25 // 1
   ],
   [
     'path' => 'assets/fonts/Humaira.otf',
@@ -1061,13 +1119,11 @@ function addCurveStyle38() {
 }
 
 function addCurveStyle39() {
-  drawCurve1();
-  drawRightLine();
+  drawCurve16();
 }
 
 function addCurveStyle40() {
-  drawCurve13();
-  drawBottomCurve9();
+  drawCurve17();
 }
 
 $preStyles = [
@@ -1112,7 +1168,7 @@ $preStyles = [
   _getStyle([], $textStyle2Short, 'addCurveStyle37'),
   _getStyle([], $textStyle2Short, 'addCurveStyle38'),
   _getStyle([], $textStyle6, 'addCurveStyle39'),
-  _getStyle([], $textStyle2Short, 'addCurveStyle40'),
+  _getStyle([], $textStyle2, 'addCurveStyle40'),
 ];
 
 $styles = [];

@@ -19,14 +19,14 @@ $styles;
 $fonts;
 
 
-$index = 19;
+$index = 83;
 
 
-$index += 20;
-$index *= 3;
-$firstName = 'Nikita';
-$lastName = 'Sobolev';
-$middleName = 'Alexeyevich';
+// $index += 20;
+// $index *= 3;
+$firstName = 'Rostislav';
+$lastName = 'Radchenko';
+$middleName = 'A';
 
 include_once('draw-styles.php');
 
@@ -63,7 +63,7 @@ function getImageFromStyle($styleIndex, $trimImage=true) {
   $textMostTopY = $textY;
   $image->annotateImage($textDraw, $textX, $textY, 0, $text);
 
-  $textMostRightX = floor($textWidth + $textX - $thickness);
+  $textMostRightX = floor($textWidth + $textX - $thickness * 2.1);
   $textMostRightY = null;
   $textMostLeftX = round($textX - $thickness);
   $textMostLeftY = null;
@@ -71,7 +71,11 @@ function getImageFromStyle($styleIndex, $trimImage=true) {
   $curvesDraw = new \ImagickDraw();
   setupCurvesDraw($curvesDraw, $thickness);
 
+  $testDraw = new \ImagickDraw();
+  $testDraw->setFillColor('red');
+
   for($y=$textY - $textHeight; $y < $textY + $textHeight / 2; $y++) {
+    $testDraw->point($textMostRightX, $y);
     $mostRightColorByY = $image->getImagePixelColor($textMostRightX, $y);
     $isDifferentWithBg = !($bgColor->isPixelSimilar($mostRightColorByY, 0));
     if ($isDifferentWithBg) {
@@ -87,6 +91,7 @@ function getImageFromStyle($styleIndex, $trimImage=true) {
 
   $drawStyles();
   $image->drawImage($curvesDraw);
+  $image->drawImage($testDraw);
   if ($angle) {
     $image->rotateImage('white', $angle);
   }
