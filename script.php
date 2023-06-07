@@ -19,7 +19,11 @@ $styles;
 $fonts;
 
 
-$index = 0;
+$index = 14;
+
+
+$index += 20;
+$index *= 3;
 $firstName = 'Nikita';
 $lastName = 'Sobolev';
 $middleName = 'Alexeyevich';
