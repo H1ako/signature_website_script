@@ -19,7 +19,7 @@ $styles;
 $fonts;
 
 
-$index = 83;
+$index = 84;
 
 
 // $index += 20;
@@ -89,7 +89,7 @@ function getImageFromStyle($styleIndex, $trimImage=true) {
     }
   }
 
-  $drawStyles();
+  $aaa = $drawStyles();
   $image->drawImage($curvesDraw);
   $image->drawImage($testDraw);
   if ($angle) {
@@ -103,6 +103,24 @@ function getImageFromStyle($styleIndex, $trimImage=true) {
   $textDraw->destroy();
 
   return $image;
+  return $aaa;
+  return $drawStyles;
+  return [
+    '$textWidth' => $textWidth,
+    '$textHeight' => $textHeight,
+    '$width' => $width,
+    '$height' => $height,
+    '$thickness' => $thickness,
+    '$textBoxBottomY' => $textBoxBottomY,
+    '$textMostTopY' => $textMostTopY,
+    '$textMostRightX' => $textMostRightX,
+    '$textMostRightY' => $textMostRightY,
+    '$textMostLeftX' => $textMostLeftX,
+    '$textMostLeftY' => $textMostLeftY,
+    'text' => $text,
+    'font' => $font,
+    'font_size' => $fontSize,
+  ];
 }
 
 function setupTextDraw($draw, $font, $fontSize) {
@@ -128,3 +146,4 @@ $image = getImageFromStyle($index);
 
 header('Content-type: image/png');
 echo $image;
+// print_r(json_encode($image));

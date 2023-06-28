@@ -20,6 +20,7 @@ function drawBottomHeart() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve() {
@@ -34,6 +35,7 @@ function drawCurve() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawStretchedCurve() {
@@ -48,6 +50,7 @@ function drawStretchedCurve() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve1() {
@@ -74,6 +77,7 @@ function drawBottomCurve1() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve2() {
@@ -88,6 +92,7 @@ function drawBottomCurve2() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve3() {
@@ -111,6 +116,7 @@ function drawBottomCurve3() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve4() {
@@ -130,6 +136,7 @@ function drawBottomCurve4() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve5() {
@@ -146,6 +153,7 @@ function drawBottomCurve5() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve6() {
@@ -163,6 +171,7 @@ function drawBottomCurve6() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve7() {
@@ -189,6 +198,7 @@ function drawBottomCurve7() {
   ];
   
   $curvesDraw->bezier($points);
+  return $points;
   $curvesDraw->bezier($secondPoints);
 }
 
@@ -216,6 +226,7 @@ function drawBottomCurveLong7() {
   ];
   
   $curvesDraw->bezier($points);
+  return $points;
   $curvesDraw->bezier($secondPoints);
 }
 
@@ -237,6 +248,7 @@ function drawBottomCurve8() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve9() {
@@ -275,6 +287,7 @@ function drawBottomCurve9() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
   $curvesDraw->bezier($points2);
 }
 
@@ -288,6 +301,7 @@ function drawBottomCurve10() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve11() {
@@ -304,6 +318,7 @@ function drawBottomCurve11() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve12() {
@@ -320,6 +335,7 @@ function drawBottomCurve12() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve13() {
@@ -348,6 +364,7 @@ function drawBottomCurve13() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve14() {
@@ -370,6 +387,7 @@ function drawBottomCurve14() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve15() {
@@ -389,6 +407,7 @@ function drawBottomCurve15() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawBottomCurve16() {
@@ -411,6 +430,7 @@ function drawBottomCurve16() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawRightLine() {
@@ -424,6 +444,7 @@ function drawRightLine() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawTopCurve() {
@@ -439,6 +460,7 @@ function drawTopCurve() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawTopSun() {
@@ -478,6 +500,7 @@ function drawCurve1() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve2() {
@@ -501,6 +524,7 @@ function drawCurve2() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 
 }
 
@@ -530,6 +554,7 @@ function drawCurve3() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve4() {
@@ -547,6 +572,7 @@ function drawCurve4() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve5() {
@@ -564,6 +590,7 @@ function drawCurve5() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve6() {
@@ -582,6 +609,7 @@ function drawCurve6() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve7() {
@@ -603,6 +631,7 @@ function drawCurve7() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve8() {
@@ -623,6 +652,7 @@ function drawCurve8() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve9() {
@@ -648,6 +678,8 @@ function drawCurve9() {
   ];
 
   $curvesDraw->bezier($points);
+
+  return $points;
 }
 
 function drawCurve10() {
@@ -668,6 +700,7 @@ function drawCurve10() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve11() {
@@ -693,6 +726,7 @@ function drawCurve11() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve12() {
@@ -717,6 +751,7 @@ function drawCurve12() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve13() {
@@ -740,6 +775,7 @@ function drawCurve13() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve14() {
@@ -760,6 +796,7 @@ function drawCurve14() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve15() {
@@ -782,6 +819,7 @@ function drawCurve15() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve16() {
@@ -802,6 +840,7 @@ function drawCurve16() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function drawCurve17() {
@@ -840,6 +879,7 @@ function drawCurve17() {
   ];
 
   $curvesDraw->bezier($points);
+  return $points;
 }
 
 function _getStyle($font, $text_style, $curves_style, $angle=0, $font_size=240) {
@@ -853,94 +893,94 @@ function _getStyle($font, $text_style, $curves_style, $angle=0, $font_size=240) 
 }
 
 function addCurveStyle1() {
-  drawBottomCurve8();
+  return drawBottomCurve8();
 }
 
 function addCurveStyle2() {
-  drawBottomCurve2();
+  return drawBottomCurve2();
   drawRightLine();
 }
 
 function addCurveStyle3() {
-  drawTopSun();
+  return drawTopSun();
   drawBottomCurveLong7();
   drawRightLine();
 }
 
 function addCurveStyle4() {
-  drawBottomCurve6();
+  return drawBottomCurve6();
 }
 
 function addCurveStyle5() {
-  drawBottomCurve5();
+  return drawBottomCurve5();
   drawRightLine();
 }
 
 function addCurveStyle6() {
-  drawBottomCurve5();
+  return drawBottomCurve5();
   drawTopCurve();
 }
 
 function addCurveStyle7() {
-  drawBottomCurve4();
+  return drawBottomCurve4();
   drawRightLine();
 }
 
 function addCurveStyle8() {
-  drawBottomCurve3();
+  return drawBottomCurve3();
 }
 
 function addCurveStyle9() {
-  drawBottomCurve7();
+  return drawBottomCurve7();
   drawRightLine();
 }
 
 function addCurveStyle10() {
-  drawStretchedCurve();
+  return drawStretchedCurve();
   drawRightLine();
 }
 
 function addCurveStyle11() {
-  drawCurve();
+  return drawCurve();
   drawTopCurve();
 }
 
 function addCurveStyle12() {
-  drawBottomHeart();
+  return drawBottomHeart();
 }
 
 function addCurveStyle13() {
-  drawBottomCurve9();
+  return drawBottomCurve9();
 }
 
 function addCurveStyle14() {
-  drawBottomCurve10();
+  return drawBottomCurve10();
   drawRightLine();
 }
 
 function addCurveStyle15() {
-  drawBottomCurve11();
+  return drawBottomCurve11();
 }
 
 function addCurveStyle16() {
-  drawBottomCurve12();
+  return drawBottomCurve12();
 }
 
 function addCurveStyle17() {
-  drawBottomCurve13();
+  return drawBottomCurve13();
 }
 
 function addCurveStyle18() {
-  drawBottomCurve14();
+  return drawBottomCurve14();
 }
 
 function addCurveStyle19() {
-  drawBottomCurve15();
+  return drawBottomCurve15();
   drawRightLine();
 }
 
 function addCurveStyle20() {
-  drawBottomCurve16();
+  return drawBottomCurve16();
 }
 
 $firstLetterOfFirstName = strlen($firstName) > 0 ? $firstName[0] : '';
@@ -1043,87 +1083,87 @@ $fonts = [
 ];
 
 function addCurveStyle21() {
-  drawCurve1();
+  return drawCurve1();
 }
 
 function addCurveStyle22() {
-  drawCurve2();
+  return drawCurve2();
 }
 
 function addCurveStyle23() {
-  drawCurve3();
+  return drawCurve3();
 }
 
 function addCurveStyle24() {
-  drawCurve4();
+  return drawCurve4();
 }
 
 function addCurveStyle25() {
-  drawCurve5();
+  return drawCurve5();
 }
 
 function addCurveStyle26() {
-  drawCurve6();
+  return drawCurve6();
 }
 
 function addCurveStyle27() {
-  drawCurve7();
+  return drawCurve7();
 }
 
 function addCurveStyle28() {
-  drawCurve8();
+  return drawCurve8();
 }
 
 function addCurveStyle29() {
-  drawCurve9();
+  return drawCurve9();
 }
 
 function addCurveStyle30() {
-  drawCurve10();
+  return drawCurve10();
 }
 
 function addCurveStyle31() {
-  drawCurve11();
+  return drawCurve11();
 }
 
 function addCurveStyle32() {
-  drawCurve12();
+  return drawCurve12();
 }
 
 function addCurveStyle33() {
-  drawCurve13();
+  return drawCurve13();
   drawRightLine();
 }
 
 function addCurveStyle34() {
-  drawCurve14();
+  return drawCurve14();
 }
 
 function addCurveStyle35() {
-  drawCurve15();
+  return drawCurve15();
 }
 
 function addCurveStyle36() {
-  drawCurve13();
+  return drawCurve13();
   drawCurve1();
 }
 
 function addCurveStyle37() {
-  drawCurve3();
+  return drawCurve3();
   drawStretchedCurve();
 }
 
 function addCurveStyle38() {
-  drawBottomCurve6();
+  return drawBottomCurve6();
   drawCurve2();
 }
 
 function addCurveStyle39() {
-  drawCurve16();
+  return drawCurve16();
 }
 
 function addCurveStyle40() {
-  drawCurve17();
+  return drawCurve17();
 }
 
 $preStyles = [
@@ -1187,5 +1227,5 @@ foreach ($preStyles as $preStyle) {
   }
 }
 
-mt_srand($randomIndex);
-shuffle($styles);
+// mt_srand($randomIndex);
+// shuffle($styles);
