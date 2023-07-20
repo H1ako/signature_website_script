@@ -41,31 +41,31 @@ $text_styles_full = [
 
 $font_size = 80;
 $font_allison = [
-  'path' => 'fonts/Allison_Script.otf',
+  'path' => 'assets/fonts/Allison_Script.otf',
   'text_styles_thickness' => 2
 ];
 $font_creation = [
-  'path' => 'fonts/Creattion_Demo.otf',
+  'path' => 'assets/fonts/Creattion_Demo.otf',
   'text_styles_thickness' => 2
 ];
 $font_aerotis = [
-  'path' => 'fonts/aerotis.regular.otf',
+  'path' => 'assets/fonts/aerotis.regular.otf',
   'text_styles_thickness' => 2
 ];
 $font_funky = [
-  'path' => 'fonts/funky-signature.regular.otf',
+  'path' => 'assets/fonts/funky-signature.regular.otf',
   'text_styles_thickness' => 1
 ];
 $font_holimount = [
-  'path' => 'fonts/holimount.regular.otf',
+  'path' => 'assets/fonts/holimount.regular.otf',
   'text_styles_thickness' => 2
 ];
 $font_southam = [
-  'path' => 'fonts/Southam.otf',
+  'path' => 'assets/fonts/Southam.otf',
   'text_styles_thickness' => 2
 ];  // only with small letter in the end
 $font_honeymoon = [
-  'path' => 'fonts/honeymoon-avenue-script.regular.otf',
+  'path' => 'assets/fonts/honeymoon-avenue-script.regular.otf',
   'text_styles_thickness' => 1
 ];  // only with small letter in the end
 
@@ -376,7 +376,7 @@ function add_bottom_curve() {
 }
 
 function draw_beizer_curve($points, $img, $text_color, $line_thickness=1) {
-  $steps = 70;
+  $steps = 80;
   
   for ($j = -($line_thickness-1)/2; $j <= ($line_thickness-1)/2; $j++) {
     imagesetthickness($img, 1); // use a thin thickness
@@ -675,7 +675,7 @@ for($y=0; $y<$height; $y++) {
 // add_bottom_curve4();
 // add_bottom_heart();
 // add_bottom_curve7();
-// add_bottom_curve5();
+add_bottom_curve5();
 // add_right_line();
 // add_top_line();
 

@@ -68,14 +68,8 @@ function getImageFromStyle($styleIndex, $trimImage=true) {
   $textMostLeftX = round($textX - $thickness);
   $textMostLeftY = null;
 
-  $curvesDraw = new \ImagickDraw();
-  setupCurvesDraw($curvesDraw, $thickness);
-
-  $testDraw = new \ImagickDraw();
-  $testDraw->setFillColor('red');
-
   for($y=$textY - $textHeight; $y < $textY + $textHeight / 2; $y++) {
-    $testDraw->point($textMostRightX, $y);
+    // $testDraw->point($textMostRightX, $y);
     $mostRightColorByY = $image->getImagePixelColor($textMostRightX, $y);
     $isDifferentWithBg = !($bgColor->isPixelSimilar($mostRightColorByY, 0));
     if ($isDifferentWithBg) {
@@ -89,37 +83,40 @@ function getImageFromStyle($styleIndex, $trimImage=true) {
     }
   }
 
-  $aaa = $drawStyles();
-  $image->drawImage($curvesDraw);
-  $image->drawImage($testDraw);
-  if ($angle) {
-    $image->rotateImage('white', $angle);
-  }
-  $trimImage && $image->trimImage(0);
-  $image->setImageAlphaChannel(\Imagick::ALPHACHANNEL_ACTIVATE);
-  $image->transparentPaintImage($bgColor, 0, 10000, false);
+  $coords = $drawStyles();
+  // $image->drawImage($curvesDraw);
+  // $image->drawImage($testDraw);
+  // if ($angle) {
+    // $image->rotateImage('white', $angle);
+  // }
+  // $trimImage && $image->trimImage(0);
+  // $image->setImageAlphaChannel(\Imagick::ALPHACHANNEL_ACTIVATE);
+  // $image->transparentPaintImage($bgColor, 0, 10000, false);
 
-  $curvesDraw->destroy();
+  // $curvesDraw->destroy();
   $textDraw->destroy();
 
-  return $image;
-  return $aaa;
-  return $drawStyles;
+  if (isset($_GET['image'])) {
+    return $image;
+  }
+
   return [
-    '$textWidth' => $textWidth,
-    '$textHeight' => $textHeight,
-    '$width' => $width,
-    '$height' => $height,
-    '$thickness' => $thickness,
-    '$textBoxBottomY' => $textBoxBottomY,
-    '$textMostTopY' => $textMostTopY,
-    '$textMostRightX' => $textMostRightX,
-    '$textMostRightY' => $textMostRightY,
-    '$textMostLeftX' => $textMostLeftX,
-    '$textMostLeftY' => $textMostLeftY,
+    'textWidth' => $textWidth,
+    'textHeight' => $textHeight,
+    'width' => $width,
+    'height' => $height,
+    'thickness' => $thickness,
+    'textBoxBottomY' => $textBoxBottomY,
+    'textMostTopY' => $textMostTopY,
+    'textMostRightX' => $textMostRightX,
+    'textMostRightY' => $textMostRightY,
+    'textMostLeftX' => $textMostLeftX,
+    'textMostLeftY' => $textMostLeftY,
     'text' => $text,
-    'font' => $font,
-    'font_size' => $fontSize,
+    'angle' => $angle,
+    'fontPath' => $font['path'],
+    'fontSize' => $fontSize,
+    'coords' => $coords
   ];
 }
 
@@ -130,20 +127,12 @@ function setupTextDraw($draw, $font, $fontSize) {
   $draw->setFont($font);
 }
 
-function setupCurvesDraw($draw, $thickness) {
-  $draw->setFillColor('transparent');
-  $draw->setStrokeOpacity(1);
-  $draw->setStrokeColor('black');
-  $draw->setStrokeAntialias(true);
-  $draw->setStrokeLinecap(\imagick::LINECAP_ROUND);
-  $draw->setStrokeLinejoin(\imagick::LINEJOIN_ROUND);
-  $draw->setStrokeMiterLimit(2);
-  $draw->setStrokeAntialias(true);
-  $draw->setStrokeWidth($thickness);
+$image = getImageFromStyle($index, false);
+
+if (isset($_GET['image'])) {
+  header('Content-type: image/png');
+  echo $image;
+  exit;
 }
-
-$image = getImageFromStyle($index);
-
-header('Content-type: image/png');
-echo $image;
+echo json_encode($image);
 // print_r(json_encode($image));
